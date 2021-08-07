@@ -3,15 +3,21 @@
 #include <cstdio>
 using namespace std;
 
-void TestFunc(int& rparam)
+int TestFunc(int param)
 {
-	rparam = 100;
+	int Result = param * 2;
+	return Result;
 }
 
 int main(int argc, char* argv[])
 {
-	int nData = 0;
-	TestFunc(nData);
-	cout << nData << endl;
+	int input = 0;
+	cout << "input number : ";
+	cin >> input;
+	int&& rdata = input + 5;
+	cout << rdata << endl;
+	int&& result = TestFunc(10);
+	result += 10;
+	cout << result << endl;
 	return 0;
 }
