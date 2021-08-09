@@ -2,15 +2,15 @@
 #include <algorithm>
 using namespace std;
 
+int TestFunc(int = 10);
+
+int TestFunc(int n)
+{
+	return n;
+}
+
 int main(int argc, char* argv[])
 {
-	int alist[5] = { 5,3,2,1,4 };
-	for (auto &n : alist)
-		cout << n <<' ';
-	cout << endl;
-	sort(alist, alist + 5);
-	for (auto &n : alist)
-		cout << n << ' ';
-	cout << endl;
+	cout << TestFunc(20) << endl;
 	return 0;
 }
