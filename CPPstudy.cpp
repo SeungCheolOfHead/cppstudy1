@@ -2,15 +2,12 @@
 #include <algorithm>
 using namespace std;
 
-int TestFunc(int = 10);
-
-int TestFunc(int n)
-{
-	return n;
-}
-
 int main(int argc, char* argv[])
 {
-	cout << TestFunc(20) << endl;
+	int x, y, z;
+	x = (1 == 1);
+	y = (2 == 3);
+	z = (1 == 1) + (1 != 1);
+	cout << x << y << z << endl;
 	return 0;
 }
