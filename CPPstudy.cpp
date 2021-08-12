@@ -2,12 +2,13 @@
 #include <algorithm>
 using namespace std;
 
+template<typename T>
+T Add(T a, T b)
+{
+	return a + b;
+}
 int main(int argc, char* argv[])
 {
-	int x, y, z;
-	x = (1 == 1);
-	y = (2 == 3);
-	z = (1 == 1) + (1 != 1);
-	cout << x << y << z << endl;
-	return 0;
+	cout << Add<int>(3, 4) << endl;
+	cout << Add(3.3, 4.4) << endl;
 }
