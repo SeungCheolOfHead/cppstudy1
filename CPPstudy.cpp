@@ -11,4 +11,5 @@ int main(int argc, char* argv[])
 {
 	cout << Add<int>(3, 4) << endl;
 	cout << Add(3.3, 4.4) << endl;
+	return 0;
 }
