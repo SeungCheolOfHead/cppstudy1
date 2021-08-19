@@ -2,18 +2,21 @@
 #include "TCHAR.h"
 using namespace std;
 
-int nData(20);
-
-namespace TEST
+class CTest
 {
-	void TestFunc(void) {
-		cout << nData << endl;
+public:
+	CTest()
+	 :mData1(10), mData2(20)
+	 {}
+	int mData1, mData2;
+	void PrintData(void) {
+		cout << mData1 << "\n" << mData2 << endl;
 	}
-	int nData = 100;
-}
+};
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	TEST::TestFunc();
+	CTest t;
+	t.PrintData();
 	return 0;
 }
