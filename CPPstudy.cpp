@@ -4,19 +4,24 @@ using namespace std;
 
 class CTest
 {
+	int nData;
 public:
-	CTest()
-	 :mData1(10), mData2(20)
-	 {}
-	int mData1, mData2;
-	void PrintData(void) {
-		cout << mData1 << "\n" << mData2 << endl;
+	CTest() 
+	{
+		cout << "CTest::CTest()" << endl;
+	}
+	~CTest() 
+	{
+		cout << "~CTest::CTest() " << endl;
 	}
 };
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	CTest t;
-	t.PrintData();
+	cout << "Begin" << endl;
+	CTest* p = new CTest[5050];
+	cout << "Test" << endl;
+	delete[] p;
+	cout << "End" << endl;
 	return 0;
 }
